@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        body,p,h1,h2,h3,h4,h5,h6,input,textarea,div,section{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border:0;
+            max-width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color: orange;
+        }
+        body{
+            background:red;
+            color: white;
+        }
+        .wrapper{
+            background: teal;
+            margin:0 auto;
+            width: 70%;
+        }
+        .box--one{
+            width: 600px;
+            height: 200px;
+            background: #010101;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .box--one::before{
+            content: '';
+            width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 50px solid red;
+            position: absolute;
+            left:50%;
+            bottom: -40px
+        }
+        .box--two{
+            width: 200px;
+            height: 200px;
+            background: #ededed;
+            border: 1px solid #000;
+            margin-top: 30px;
+            color: black;
+            padding: 10px 0px 0 5px;
+        }
+        .img-box{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#" class="btn" id="">Hello a link here</a>
+    <div class="box--one">
+        Text should be centralised
+    </div>
+    <div class="box--two">
+        <img class="img-box" src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1411&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="title">
+        <span>
+            This is an image
+        </span>
+    </div>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn'),
+            text = document.querySelector('.box--one');
+
+        btn.addEventListener('click', function (e){
+            e.preventDefault();
+            text.innerHTML = "You are welcome"
+        })
+
+        document.write('Hello world')
+    </script>
+</body>
+</html>
