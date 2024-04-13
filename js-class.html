@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript class</title>
+    <style>
+        body,p,h1,h3,h2,h5,h6,h4{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li,ol{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: teal;
+            padding: 30px;
+        }
+        .box--one{
+            width: 20%;
+            float: left;
+        }
+        .box--two{
+            width: 20%;
+            float: left;
+        }
+        .field-input{
+            padding: 10px;
+            min-height: 35px;
+            width: 100%;
+            border:0;
+            border-radius: 10px;
+        }
+        .submit{
+            margin-top: 10px;
+            border-radius: 10px;
+            background: black;
+            color: white;
+            border: 1px solid transparent;
+            padding: 15px 40px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #000;
+            border-color: black;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event){
+            const form = document.querySelector('.general-form'),
+                field = document.querySelector('.field-input'),
+                button = document.querySelector('.submit'),
+                list_item = document.querySelector('.list--item');
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                list_item.innerHTML += '<li>' + field.value + '</li>';
+                field.value = '';
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <div class="box--one">
+        <h3>Javascript class</h3>
+        <ul class="list--item">
+            <li>Hello</li>
+            <li>My</li>
+            <li>Name</li>
+            <li>Is</li>
+            <li>chka-chka, Slim Shady</li>
+        </ul>
+    </div>
+    <div class="box--two">
+        <form class="general-form">
+            <input required class="field-input" type="text" placeholder="Enter any word">
+            <input type="submit" value="submit" class="submit">
+        </form>
+    </div>
+</body>
+</html>
