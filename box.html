@@ -27,8 +27,8 @@
             width: 70%;
         }
         .box--one{
-            width: 600px;
-            height: 200px;
+            width: 200px;
+            min-height: 200px;
             background: #010101;
             color: white;
             text-align: center;
@@ -37,28 +37,14 @@
             align-items: center;
             position: relative;
         }
-        .box--one::before{
-            content: '';
-            width: 0;
-      height: 0;
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      border-top: 50px solid red;
-            position: absolute;
-            left:50%;
-            bottom: -40px
-        }
         .box--two{
-            width: 200px;
-            height: 200px;
+            min-width: 200px;
+            max-width: 500px;
             background: #ededed;
             border: 1px solid #000;
             margin-top: 30px;
             color: black;
             padding: 10px 0px 0 5px;
-        }
-        .img-box{
-            
         }
     </style>
 </head>
